@@ -5,27 +5,37 @@
   <title>Twitter Clone</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
 
   <header id="nav-bar" class="clear">
     <nav class="container">
-      <li id="home-button" class="button-box">
-        <a href="/">
-          <span class="new-wrapper">
-            <div class="icon nav-home"></div>
-          </span>
-          <span class="icon-text">Home</span>
-        </a>
-      </li>
+      <div id="left-menu-box" class="clear">
+
+        <li id="home-button" class="button-box">
+          <a href="/">
+            <span class="new-wrapper">
+              <div class="icon nav-home"></div>
+            </span>
+            <span class="icon-text">Home</span>
+          </a>
+        </li>
+        <li id="connect-button" class="button-box">
+          <a href="/">
+            <span class="new-wrapper">
+              <div class="icon nav-connect"></div>
+            </span>
+            <span class="icon-text">Connect</span>
+          </a>
+        </li>
+
+      </div>
     </nav>
   </header>
   <div id="content" class="clear container grid grid-pad">
-    
-    <div id="box">
-      <div class="profile"></div>
-    </div>
 
+  
     <div class="col-1-3">
       Sidebar
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ut facilis beatae assumenda expedita perferendis ipsa. Ducimus, culpa, ab, facilis illo neque odit aperiam dolores placeat eos vero mollitia praesentium.
@@ -36,5 +46,18 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, ea, porro quaerat consectetur harum saepe veritatis earum magnam sapiente iste ullam molestias doloremque sequi eaque culpa quisquam praesentium numquam. Voluptatem.
     </div>
   </div>
+
+  <script>
+
+    $(document).ready(function(){
+      $(".button-box a").hover(function(){
+        $(".nav-connect").addClass("hover");
+        },function() {
+        $(".nav-connect").removeClass("hover");
+      });
+    });
+
+  </script>
+
 </body>
 </html>
